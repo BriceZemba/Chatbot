@@ -10,7 +10,7 @@ It's a powerful free model that can have some many advantages like answering any
 pip install google-generativeai
 ```
 ## Frontend/Backend
-For the frontend an the backend streamlit is a very powerful library that that manage the frontend and the backend
+For the frontend an the backend streamlit is a very powerful library that that manage the frontend and the backend.
 
 ## How to install Streamlit ??
 ```bash
