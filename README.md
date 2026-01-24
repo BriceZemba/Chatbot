@@ -4,49 +4,92 @@
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
 ## 📋 Overview
-This project implements an autonomous research-augmented conversational AI. Unlike standard chatbots, this system leverages **Agentic RAG** (Retrieval-Augmented Generation) to perform iterative web research, self-reflection, and synthesized answering using Google's Gemini-Pro models.
+
+The **Gemini-Powered Research Agent** is an autonomous, research-augmented conversational AI system designed to perform **iterative web research, self-reflection, and knowledge synthesis**. Unlike standard chatbots, this system leverages **Agentic RAG (Retrieval-Augmented Generation)** combined with Google’s **Gemini-Pro models** to provide accurate, evidence-based, and multimodal responses.
+
+The agent is capable of understanding complex queries, retrieving relevant external knowledge, analyzing both text and images, and generating **citations-backed answers**, making it ideal for research, technical analysis, and educational purposes.
+
+---
 
 ## 📄 Research Documentation
-For a comprehensive architectural breakdown and analysis of the iterative reasoning loops, please refer to the technical report:
-> **[Download Research Report (PDF)](./Technical_Report.pdf)**
+
+A comprehensive technical breakdown, architectural details, and experimental results are available in our report:
+
+> **[Download Technical Report (PDF)](./Technical_Report.pdf)**
+
+---
 
 ## 🚀 Key Features
-- **Iterative Reasoning Loop**: Powered by LangGraph to identify knowledge gaps and refine search strategies autonomously.
-- **Multimodal Analysis**: Integrated vision capabilities to analyze health-related images or complex document layouts.
-- **Source Traceability**: Every response is grounded with explicit citations and web-referenced data.
-- **Fullstack Deployment**: A robust backend using FastAPI/LangGraph coupled with a responsive frontend (React/Streamlit).
+
+* **Iterative Reasoning Loop**: Uses **LangGraph** to detect gaps in knowledge, plan search strategies, retrieve information, and refine answers dynamically.
+* **Multimodal Analysis**: Supports **text and image inputs**, allowing analysis of charts, diagrams, PDFs, and medical images using Gemini-Pro-Vision.
+* **Source Traceability**: Every answer includes explicit references and citations for verified, reproducible results.
+* **Fullstack Deployment**: Combines **FastAPI** backend for high-performance APIs with **Streamlit/React** frontends for interactive and scalable user experiences.
+* **Autonomous Multi-Agent Workflows**: Uses modular sub-agents to independently handle search, analysis, and reasoning tasks within the same conversation.
+
+---
 
 ## 🛠️ Tech Stack
-- **Core AI**: Google Gemini-Pro & Gemini-Pro-Vision.
-- **Orchestration**: LangGraph for stateful, cyclic multi-agent workflows.
-- **Backend**: FastAPI for high-performance asynchronous API management.
-- **Frontend**: Streamlit for rapid prototyping and React for industrial-grade UI.
+
+| Component     | Technology                            | Purpose                                            |
+| ------------- | ------------------------------------- | -------------------------------------------------- |
+| Core AI       | Google Gemini-Pro & Gemini-Pro-Vision | Large-scale reasoning and multimodal understanding |
+| Orchestration | LangGraph                             | Multi-agent iterative reasoning loops              |
+| Backend       | FastAPI                               | Asynchronous, high-performance API handling        |
+| Frontend      | Streamlit & React                     | Rapid prototyping and production-ready UI          |
+
+---
 
 ## 💻 Quick Start
+
+### 1. Install Dependencies
+
 ```bash
-# Install dependencies
 pip install google-generativeai streamlit python-dotenv langgraph fastapi
+```
 
-# Run the experimental chatbot
+### 2. Run the Chatbot
+
+```bash
 streamlit run geminichatbot.py
+```
 
-Google generative ai has two free models like gemini-pro and gemini-pro-vision.
+### 3. Gemini-Pro Models
 
-## Gemini-Pro 
-It's a powerful free model that can have some many advantages like answering any type of question.
+* **Gemini-Pro**: Text-based model capable of reasoning, answering questions, and synthesizing knowledge.
+* **Gemini-Pro-Vision**: Extends Gemini-Pro with image and multimodal processing for charts, diagrams, and visual data analysis.
 
-## How to install it ??
+Install the models via Python:
+
 ```bash
 pip install google-generativeai
 ```
-## Frontend/Backend
-For the frontend an the backend streamlit is a very powerful library that that manage the frontend and the backend.
 
-## How to install Streamlit ??
-```bash
-pip install streamlit
-```
+---
 
-## Explanation
+## 🔹 Frontend & Backend Details
 
-After installing the useful library for the project and run it in your laptop , then you will be able to ask any question directly to gemini-pro
+* **Streamlit**: Provides an interactive interface for experimenting with the agent and visualizing results in real time.
+* **React**: Optional for production-grade web applications, allowing a modern, scalable UI.
+* **FastAPI**: Handles backend logic, routing, and asynchronous API calls to the agent, ensuring **scalability and low-latency responses**.
+
+---
+
+## 📖 Detailed Explanation
+
+The Gemini-Powered Research Agent is designed to **autonomously research and reason** by iterating through the following workflow:
+
+1. **Query Analysis** – Understands user input and identifies knowledge gaps.
+2. **External Knowledge Retrieval** – Uses LangGraph to fetch relevant web content, papers, or databases.
+3. **Self-Reflection & Reasoning** – Evaluates retrieved data to synthesize accurate, high-confidence responses.
+4. **Answer Generation** – Produces a detailed, evidence-backed response, including citations and references.
+5. **Multimodal Processing** – If needed, incorporates images, charts, or PDFs into reasoning for richer answers.
+
+This system bridges the gap between **static LLM responses** and **dynamic research capabilities**, enabling both practical applications and experimental research.
+
+---
+
+## 📎 References
+
+All sources are explicitly cited in responses. For academic or professional use, references can be extracted from generated outputs.
+
